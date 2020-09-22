@@ -1,0 +1,36 @@
+<html>
+<script>
+function disp_date(frm)
+{
+d=new Date();
+frm.dor.value=d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getYear();
+}
+</script>
+<style>
+img{
+position:absolute;
+left:240px;
+top:90px;
+}
+</style><hr>
+<h4><font color=red><u>DONOR REGISTRATION</u></font></h4>
+<body onLoad="disp_date(f)" background="banner.jpg"> 
+<p><form name='f' method=post action="register.jsp">
+	<table>
+<tr><td><b>User ID</font></td><td><input type=text size=20 name='uid'></td></tr>
+<tr><td><b>Password</td><td><input type=password size=20 name='pwd'></td></tr>
+<tr><td><b>User Name</td><td><input type=text size=20 name='uname'></td></tr>
+<tr><td><b>Address</td><td><input type=text size=20 name='caddr'></td></tr>
+<tr><td><b>Contact No</td><td><input type=text size=20 name='cno'></td></tr>
+<tr><td><b>Email-ID</td><td><input type=text size=20 name='emid'></td></tr>
+<tr><td><b>Regn. Date</td><td><input type=text size=20 name='dor' readonly></td></tr>
+<tr><td><b>Blood Group</td><td><select name='r1'><option value='A+'>A+</option><option value='A-'>A-</option><option value='B+'>B+</option><option value='B-'>B-</option><option value='AB+'>AB+</option><option value='AB-'>AB-</option><option value='O+'>O+</option><option value='O-'>O-</option></select></td></tr>
+<tr></tr>
+<img src="zeee.gif" width=175 height=200>
+<tr><td></td><td>  <input type="image" src="submit.gif" alt="Submit" width="48" height="48"></td><td></td></tr>
+</table> </form>
+
+<marquee behavior="scroll" direction="up" scrolldelay="100"><p><em> <b>Register and save a life!</marquee>
+
+<p>
+</html>
