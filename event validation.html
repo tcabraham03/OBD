@@ -1,0 +1,111 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function validation()
+ {
+alert("ready");
+
+var x = document.form.eid.value;
+var minLength = 6;
+    if (x==null || x=="")
+ {
+        alert("event id must be filled out");
+document.form.eid.focus();
+        return false;
+}
+  
+if (document.form.eid.value.length < minLength) 
+{  
+alert('Your event id must be at least ' + minLength + ' characters long. Try again.'); 
+  
+return false;  
+} 
+
+ var a = document.form.address.value;
+ if(a=="")
+ {
+ alert("Please Enter Your Details Here");
+ document.form.address.focus();
+ return false;
+ }
+ if (document.form.edate.value.length == 0)
+    {
+        alert("Please enter a date,in the format dd/mm/yyyy")
+        document.form.edate.focus()
+        return false
+    }
+
+ // regular expression to match required date format
+   var re = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+
+    if(document.form.edate.value != '' && !document.form.edate.value.match(re)) {
+      alert("Invalid date format: " + document.form.edate.value);
+      document.form.edate.focus();
+      return false;
+    }
+ if (document.form.etime.value.length == 0)
+    {
+        alert("Please enter the time of the event, in the format eg;11:00pm")
+        document.form.etime.focus()
+        return false
+    }
+
+
+    
+    var time = /^\d{1,2}:\d{2}([ap]m)?$/;
+
+    if(document.form.etime.value != '' && !document.form.etime.value.match(time)) {
+      alert("Invalid time format: " + form.etime.value);
+      document.form.etime.focus();
+      return false;
+    }
+
+var y= document.form.location.value;
+ if (y==null || y=="")
+ {
+        alert("location must be filled out");
+document.form.location.focus();
+        return false;
+}
+var regexp = /^[a-zA-Z]+$/; 
+if(document.form.location.value.match(regexp))
+ { 
+alert("Validation: Successful.");
+ return true; }
+else
+{
+ alert("enter only letters");
+ document.form.location.value.focus();
+ return false; } 
+
+
+
+
+return true;
+ }
+
+
+
+ </script>
+ </head>
+ <body>
+ <form name="form" method="post" onsubmit="return validation()" action="event.jsp">
+<table>
+<tr><td><b>Eventid</font></td><td><input type=text size=20 name="eid"></td></tr>
+<tr><td><b>Date</font></td><td><input type=text size=20 name='edate'></td></tr>
+<tr><td><b>Time</td><td><input type=text size=20 name='etime'></td></tr>
+
+ <tr>
+ <td> description:</td>
+ <td><textarea name="address" cols="30" rows="4"></textarea></td>
+ </tr>
+ <tr>
+<tr><td><b>Location</td><td><input type=text size=20 name='location'></td></tr>
+ <td></td>
+ <td><input type="submit" name="sub" value="Submit"></td>
+ </tr>
+</table>
+ </form>
+ </body>
+ </html>
+

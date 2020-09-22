@@ -1,0 +1,30 @@
+<html>
+<script>
+function disp_date(frm)
+{
+d=new Date();
+frm.dor.value=d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getYear();
+}
+</script>
+<h1><b><center><font color="red">CONTACT US<b></font></h1><hr>
+
+<body onLoad="disp_date(f)" background="banner.jpg">
+<p><form name='f' method=post action='register.jsp'>
+<table>
+<tr><td><font color="dark green">Name :</font></td><td><input type=text size=20 name='yname'></td></tr>
+<tr><td><font color="dark green">Email :</font></td><td><input type=text size=20 name='ymail'></td></tr>
+
+
+<tr>
+		<td class="style17" style="width: 100px; height: 50px;"><font color="dark green">Suggestion :</td>
+		<td class="style15" style="width: 100px; height: 100;"><span dir="ltr"></font>
+		<textarea rows="6" name="msg_body" dir="ltr" id="fa2" tabindex="2" lang="fa" onclick="this.value=''" style="width: 200px"></textarea></span></td>
+	</tr>
+<tr><td><font color="dark green">Date</font></td><td><input type=text size=20 name='dor' readonly></td></tr>
+<tr></tr>
+<tr><td></td><td><input type=submit value='submit'></td></tr>
+</table> </form>
+<p>
+<!--<img src="zeee.gif" width=200 heigth=200>-->
+</body>
+</html>
